@@ -1,0 +1,42 @@
+{
+  "mcpServers": {
+    "transformers-ai": {
+      "tools": [
+        {
+          "name": "transform_and_roll_out",
+          "description": "Executes morphic compute state transition and autonomous convoy dispatch",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "target_location": {
+                "type": "string"
+              },
+              "mission_payload": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "target_location",
+              "mission_payload"
+            ]
+          }
+        },
+        {
+          "name": "verify_allspark_integrity",
+          "description": "Verifies AllSpark cryptographic energon reserve and matrix consensus",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "allspark_hash": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "allspark_hash"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
