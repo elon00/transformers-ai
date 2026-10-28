@@ -1,36 +1,13 @@
-# Transformers AI ($AUTOBOT)
-[![CI/CD Pipeline](https://github.com/elon00/transformers-ai/actions/workflows/ci-cd-pipeline.yml/badge.svg)](https://github.com/elon00/transformers-ai/actions/workflows/ci-cd-pipeline.yml)
-[![Reality Check](https://img.shields.io/badge/Reality%20Check-100%2F100%20GENUINE%20GREEN-emerald.svg)](tests/reality_check_harness.py)
-[![PQC Standard](https://img.shields.io/badge/NIST-FIPS%20203%2F204-purple.svg)]()
-[![Blockchain](https://img.shields.io/badge/Blockchain-Arbitrum%20Stylus%20(EVM%20L2)-blue.svg)]()
+# Transformers AI local demonstration
 
-> **Cybertron Autonomous Morphic Compute, AllSpark Energy Conservation Protocol, Optimus Prime Matrix-of-Leadership Consensus, and Decepticon Defense Mesh.**
+This repository contains a static dashboard, a deterministic Rust automaton and a Python telemetry demo. The dashboard does not connect a wallet, submit a transaction or verify an on-chain invariant. Preview actions are explicitly labelled and accept whole-number quantities from 1 to 1,000,000. The Python service enforces the same quantity bounds and validates destinations.
 
----
+## Verify locally
 
-## 🏛️ Project Profile
-- **Project Identity:** Transformers AI
-- **Asset Ticker:** $AUTOBOT
-- **Core Theme:** Cybertron Morphic Compute Protocol
-- **Blockchain:** Arbitrum Stylus (EVM L2)
-- **Smart Contract:** `AllSparkEnergyVault.sol`
-
----
-
-## 🚀 Key Features
-- **Deterministic 64-bit Conway Engine:** Non-linear invariant state machine in zero-dependency Rust (`src/main.rs`).
-- **Native Smart Contract:** `AllSparkEnergyVault.sol` enforcing non-custodial cryptographic guarantees.
-- **Agentic Service:** Autonomous Python client in `src/transformers_morphic_service.py`.
-- **Interactive QUX Launchpad:** Responsive dashboard with live Conway visualizer and Web4 QR generator (`index.html`).
-- **Model Context Protocol (MCP):** 2 native tools exposed via `mcp.json`.
-
----
-
-## 🧪 Testing & Verification
-```bash
-# Run 5-Gate Reality Check Test Harness
+```sh
+python -m unittest discover -s tests -p test_morphic_service.py -v
 python tests/reality_check_harness.py
-
-# Run Unit & Integrity Test Suite
-python -m unittest discover tests
+cargo build --offline --locked
 ```
+
+The tests exercise actual telemetry results and rejected inputs. Passing them does not establish wallet, RPC, token, PQC, escrow, security or production readiness. No deployment or minting is performed. Historical whitepapers, architecture descriptions and checked-in audit reports are not execution evidence.
