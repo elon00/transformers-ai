@@ -10,18 +10,24 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Set up Rust
-        uses: actions-rust-lang/setup-rust-toolchain@v1
+        uses: actions-rust-lang/setup-rust-toolchain@166cdcfd11aee3cb47222f9ddb555ce30ddb9659 # v1
       - name: Build Rust Engine
-        run: cargo build --verbose
+        run: cargo build --offline --locked --verbose
       - name: Run Rust Engine
-        run: cargo run --release
+        run: cargo run --offline --locked --release
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
-          python-version: '3.11'
+          python-version: '3.11.17'
       - name: Run Test Suite
         run: python -m unittest discover tests
+      - name: Set up Node for UI behavior tests
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24.19.0'
+      - name: Run actual inline UI behavior tests
+        run: node --test --test-reporter=tap tests/ui-actions.test.mjs
       - name: Run Reality Check Harness
         run: python tests/reality_check_harness.py

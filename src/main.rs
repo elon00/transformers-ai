@@ -78,6 +78,6 @@ fn main() {
     println!("[COMPLETE] Executed {} deterministic cycles.", cycles);
     println!("[STATE] Final State Grid : 0x{:016X}", engine.state_grid);
     println!("[CHECKSUM] Invariant Checksum: 0x{:016X}", final_checksum);
-    println!("[VERDICT] CONWAY INVARIANT PRESERVED: 100/100 GENUINE GREEN");
+    println!("[SCOPE] Local automaton cycles completed. Wallet, RPC, chain and cryptographic integrations are unverified.");
     println!("================================================================");
 }

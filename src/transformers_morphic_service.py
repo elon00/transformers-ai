@@ -10,6 +10,11 @@ class TransformersMorphicAgent:
         self.matrix_of_leadership_held = True
 
     def transform_and_roll_out(self, destination: str, payload_units: int) -> dict:
+        if not isinstance(destination, str) or not destination.strip() or len(destination.strip()) > 256 or not destination.isprintable():
+            raise ValueError("destination must be 1-256 printable characters")
+        if type(payload_units) is not int or not 1 <= payload_units <= 1_000_000:
+            raise ValueError("payload_units must be an integer from 1 to 1000000")
+        destination = destination.strip()
         dispatch_hash = hashlib.sha256(f"{self.commander}:{destination}:{payload_units}:{time.time()}".encode()).hexdigest()
         return {
             "commander": self.commander,
