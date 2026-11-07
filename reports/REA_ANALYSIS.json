@@ -1,0 +1,68 @@
+{
+  "engine": "REA_Reverse_Engineer_Anything",
+  "status": "STRUCTURE_RECONSTRUCTED",
+  "analyzed_files": 20,
+  "manifest": {
+    "ARCHITECTURE_BOOK.md": {
+      "bytes": 1045
+    },
+    "Cargo.lock": {
+      "bytes": 166
+    },
+    "Cargo.toml": {
+      "bytes": 92
+    },
+    "index.html": {
+      "bytes": 12870
+    },
+    "mcp.json": {
+      "bytes": 1101
+    },
+    "README.md": {
+      "bytes": 906
+    },
+    "WHITEPAPER.md": {
+      "bytes": 1414
+    },
+    "contracts\\AllSparkEnergyVault.sol": {
+      "bytes": 1995
+    },
+    "reports\\audit_evidence.json": {
+      "bytes": 1128
+    },
+    "scripts\\rea_inspector.py": {
+      "bytes": 1485
+    },
+    "scripts\\rsi_engine.py": {
+      "bytes": 2039
+    },
+    "src\\main.rs": {
+      "bytes": 2934
+    },
+    "src\\transformers_morphic_service.py": {
+      "bytes": 1676
+    },
+    "tests\\reality_check_harness.py": {
+      "bytes": 525
+    },
+    "tests\\test_morphic_service.py": {
+      "bytes": 2438
+    },
+    "tests\\test_suite.py": {
+      "bytes": 85
+    },
+    "tests\\ui-actions.test.mjs": {
+      "bytes": 2171
+    },
+    "tests\\__init__.py": {
+      "bytes": 0
+    },
+    ".github\\workflows\\ci-cd-pipeline.yml": {
+      "bytes": 1200
+    },
+    ".github\\workflows\\qmoosa-rsi-rea-sync.yml": {
+      "bytes": 531
+    }
+  },
+  "timestamp": 1794057316
+}
